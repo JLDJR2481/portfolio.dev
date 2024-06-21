@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+---
+
+<Layout
+  title="Portafolio de José Luis - Desarrollador y Programador Web en auge"
+  description="Contrata a José Luis."
+>
+  <main class="px-4">
+    <SectionContainer id="top" class="py-44">
+      <img class="rounded-full size-32 mb-4 object-contain" src="foto.png" alt="jose-luis" />
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        ¡Buenas! Soy José Luis
+        <a
+          href="https://linkedin.com/in/jose-luis-de-jesus-ramon"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl text-wrap max-w-[700px]">
+        <span
+          >Desarrollador Web en estado de Work In Progress ubicado en <span
+            class="text-red-200/90">Palma de Mallorca.</span
+          ></span
+        >
+        <span class="text-yellow-200/90">No tengo ninguna especialización</span
+        >, pero sí una gran pasión por obtener una y crecer profesionalmente
+        como <span class="opacity-75">programador.</span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/jose-luis-de-jesus-ramon">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/jldjr2481">
+          <GithubIcon class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:jose.luis.de.jesus.ramon@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          jose.luis.de.jesus.ramon@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>

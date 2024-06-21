@@ -1,0 +1,105 @@
+{
+    "basics": {
+        "name": "José Luis De Jesús Ramón",
+        "label": "WIP Programmer",
+        "image": "",
+        "email": "jose.luis.de.jesus.ramon@gmail.com",
+        "phone": "+34 640357722",
+        "url": "",
+        "summary": "Mi nombre es José Luis. Soy un chico que recién empieza a crecer en este mundo tan precioso conocido como informática. Tras una mala experiencia en la UIB y unos años perdidos, decidí tomar rumbo a aquello que más me apasionaba y, durante 2022-2024 disfruté del aprendizaje de ello. Me considero como un chico responsable, con una gran capacidad de aprendizaje y de adaptación al entorno empresarial, y una gran motivación de querer aprender más y más cada día. Mi objetivo principal, en la actualidad, es querer crecer y consolidarme como un programador.",
+        "location": {
+            "address": "C/ Son Pontivic, nº33",
+            "postalCode": "07006",
+            "city": "Palma de Mallorca",
+            "countryCode": "ES",
+            "region": "España"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "",
+                "url": "https://linkedin.com/in/jose-luis-de-jesus-ramon"
+            },
+            {
+                "network": "GitHub",
+                "username": "JLDJR2481",
+                "url": "https://github.com/jldjr2481"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Barceló Hotel Group",
+            "position": "Analista Técnico Funcional orientado a Ecommerce",
+            "url": "https://www.barcelogrupo.com/",
+            "startDate": "29-05-2023",
+            "endDate": "26-07-2024",
+            "summary": "Durante mi paso en la FP Dual, he realizado las prácticas en Barceló Hotel Group, una de las mayores cadenas hoteleras del mundo. Este trabajo me ha enseñado mucho sobre la lógica de negocio que envuelve en torno a su entorno, además de gestionar un pequeño equipo (no como Scrum, sino como Product Owner contando con el apoyo de mi tutor de empresa)",
+            "highlights": [
+                "Prácticas de empresa para la FP Dual",
+                "Aprendizaje de lógica de negocio",
+                "Gestión de tickets incidental y de tareas"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "CIFP Francesc de Borja Moll",
+            "url": "https://cifpfbmoll.eu",
+            "area": "IT",
+            "studyType": "FP Superior",
+            "startDate": "09-2022",
+            "endDate": "06-2024",
+            "score": ""
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certificate",
+            "date": "2021-11-07",
+            "issuer": "Company",
+            "url": "https://certificate.com"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "Master",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Español",
+            "fluency": "Nativo"
+        },
+        {
+            "language": "Catalán",
+            "fluency": "Nativo"
+        },
+        {
+            "language": "Inglés",
+            "fluency": "Medio"
+        }
+    ],
+    "projects": [
+        {
+            "name": "BCD-Games",
+            "startDate": "02-2024",
+            "endDate": "06-2024",
+            "description": "TFG para la obtención del título de la FP Dual de Desarrollo de Aplicaciones Webs",
+            "highlights": [
+                "Aprendizaje completo de Django",
+                "Refuerzo de Python, HTML, CSS, JS y Modelo Vista Controlador",
+                "Individual",
+                "",
+                "En desarrollo de funcionalidades y mejoras"
+            ],
+            "url": "https://github.com/jldjr2481/"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+---
+import DjangoIcon from "../components/icons/pillsIcons/Django.astro";
+import PythonIcon from "../components/icons/pillsIcons/Python.astro";
+import RedisIcon from "../components/icons/pillsIcons/Redis.astro";
+import SQLIcon from "../components/icons/pillsIcons/SQL.astro";
+
+const TAGS = {
+  PYTHON: {
+    name: "Python",
+    class: "bg-yellow-200/50 text-white",
+    icon: PythonIcon,
+  },
+  DJANGO: {
+    name: "Django",
+    class: "bg-green-200/50 text-white",
+    icon: DjangoIcon,
+  },
+  REDIS: {
+    name: "Redis",
+    class: "bg-red-300/50 text-white",
+    icon: RedisIcon,
+  },
+  SQL: {
+    name: "SQL",
+    class: "bg-blue-100/50 text-white",
+    icon: SQLIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "BCD-Games",
+    description:
+      "Se trata de un TFG para la obtención de la titulación de la FP Superior en Desarrollo Web. Es un proyecto que toca el mundo de los videojuegos y la información tanto objetiva como subjetiva de los mismos, juntando ambas en una misma plataforma. No es un producto final, aunque sí un proyecto donde pongo a prueba mi gran capacidad de adaptación en herramientas desconocidas (personalmente) como Django y Redis; y un repaso de las buenas prácticas enseñadas durante el curso.",
+    link: "",
+    github: "https://github.com/JLDJR2481/BCD-Games",
+    image: "/projects/bcd-games.webp",
+    tags: [
+      TAGS.DJANGO,
+      TAGS.PYTHON,
+      TAGS.REDIS,
+      TAGS.SQL
+    ],
+  },
+];
+---
+
+<div>
+  {
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-md ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-6" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-2xl shadow-white/10"
+          src={image}
+          alt={`Captura de pantalla de ${title}`}
+        />
+      </article>
+    ))
+  }
+</div>

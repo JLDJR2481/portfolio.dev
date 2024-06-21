@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Mayo 2023 - Junio 2024",
+    title: "Analista Técnico Funcional orientado a Ecommerce",
+    company: "Barceló Hotel Group",
+    description: "Durante mi paso en la FP Dual, he realizado las prácticas en Barceló Hotel Group, una de las mayores cadenas hoteleras del mundo. Este trabajo me ha enseñado mucho sobre la lógica de negocio que envuelve en torno a su entorno, además de gestionar un pequeño equipo (no como Scrum, sino como Product Owner contando con el apoyo de mi tutor de empresa)",
+    link: "https://www.barcelogrupo.com/",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
