@@ -60,11 +60,11 @@ const PROJECTS = [
     </h3>
     <div class="flex flex-wrap mt-2">
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <ul class="flex flex-row mb-2 gap-x-2 mt-4">
+      <ul class="flex flex-row flex-wrap mb-2 gap-x-2 mt-4">
           {tags.map((tag) => (
-            <li>
+            <li class="mt-2">
               <span
-                class={`flex gap-x-2 rounded-full text-md ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full text-md ${tag.class} py-1 px-2`}
               >
                 <tag.icon class="size-6" />
                 {tag.name}
