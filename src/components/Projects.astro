@@ -3,44 +3,93 @@ import DjangoIcon from "../components/icons/pillsIcons/Django.astro";
 import PythonIcon from "../components/icons/pillsIcons/Python.astro";
 import RedisIcon from "../components/icons/pillsIcons/Redis.astro";
 import SQLIcon from "../components/icons/pillsIcons/SQL.astro";
+import AngularIcon from "../components/icons/pillsIcons/Angular.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import LinkIcon from "../components/icons/Link.astro";
+import JavascriptIcon from "../components/icons/pillsIcons/Javascript.astro"
 
 import LinkButton from "../components/LinkButton.astro";
+import TypescriptIcon from "../components/icons/pillsIcons/Typescript.astro";
+import ScssIcon from "../components/icons/pillsIcons/Scss.astro";
+import NpmIcon from "../components/icons/pillsIcons/Npm.astro";
 
 const TAGS = {
   PYTHON: {
     name: "Python",
     class: "bg-yellow-200/50 text-black dark:text-white",
     icon: PythonIcon,
+    link: "https://www.python.org/"
   },
   DJANGO: {
     name: "Django",
     class: "bg-green-200/50 text-black dark:text-white",
     icon: DjangoIcon,
+    link: "https://www.djangoproject.com/"
   },
   REDIS: {
     name: "Redis",
     class: "bg-red-300/50 text-black dark:text-white",
     icon: RedisIcon,
+    link: "https://redis.io/"
   },
   SQL: {
     name: "SQL",
     class: "bg-blue-100/50 text-black dark:text-white",
     icon: SQLIcon,
+    link: "https://www.mysql.com/"
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-purple-500/25 text-black dark:text-white",
+    icon: AngularIcon,
+    link: "https://angular.dev/"
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-blue-300/50 text-black dark:text-white",
+    icon: TypescriptIcon,
+    link: "https://www.typescriptlang.org/"
+  },
+  SCSS: {
+    name: "SASS",
+    class: "bg-pink-500/50 text-black dark:text-white",
+    icon: ScssIcon,
+    link: "https://sass-lang.com/"
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-amber-300/50 text-black dark:text-white",
+    icon: JavascriptIcon,
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  NPM: {
+    name: "npm",
+    class: "bg-red-600/50 text-black dark:text-white",
+    icon: NpmIcon,
+    link: "https://www.npmjs.com/"
+  }
+  
 };
 
 const PROJECTS = [
   {
+    title: "IBRelleu",
+    description:
+    "Aplicación Web desarrollada durante mi paso por la empresa ADRBalears. IBRelleu es el mercado de compraventas de pequeñas y medianas empresas de las Islas Baleares, fomentando la continuidad de las empresas que son viables económicamente y buscan un relevo en la propiedad y dirección, con el fin de evitar el cierre de negocios, manteniendolos en funcionamiento y salvaguardar los puestos de trabajo.",
+    image: "/projects/logo-ibrelleu.png",
+    tags: [TAGS.ANGULAR, TAGS.TYPESCRIPT, TAGS.SCSS, TAGS.NPM],
+    github: "",
+    link: "https://adrbalears.es/ibrelleu/es/bienvenidos-a-ibrelleu"
+  },
+  {
     title: "BCD-Games",
     description:
-      "TFG para la obtención de la titulación de la FP Superior en Desarrollo Web. Es un proyecto que toca el mundo de los videojuegos y la información tanto objetiva como subjetiva de los mismos, juntando ambas en una misma plataforma. Proyecto en desarrollo y puliéndose",
-    link: "",
-    github: "https://github.com/JLDJR2481/BCD-Games",
+    "TFG para la obtención de la titulación de la FP Superior en Desarrollo Web. Es un proyecto que toca el mundo de los videojuegos y la información tanto objetiva como subjetiva de los mismos, juntando ambas en una misma plataforma. Proyecto en desarrollo y puliéndose.",
     image: "/projects/bcd-games.webp",
-    tags: [TAGS.DJANGO, TAGS.PYTHON, TAGS.REDIS, TAGS.SQL],
-  },
+    tags: [TAGS.DJANGO, TAGS.PYTHON, TAGS.JAVASCRIPT, TAGS.REDIS, TAGS.SQL],
+    github: "https://github.com/JLDJR2481/BCD-Games",
+    link: ""
+  }
 ];
 ---
 
@@ -63,12 +112,14 @@ const PROJECTS = [
       <ul class="flex flex-row flex-wrap mb-2 gap-x-2 mt-4">
           {tags.map((tag) => (
             <li class="mt-2">
+              <a href={`${tag.link}`}>
               <span
                 class={`flex gap-x-2 rounded-full text-md ${tag.class} py-1 px-2`}
               >
                 <tag.icon class="size-6" />
                 {tag.name}
               </span>
+            </a>
             </li>
           ))}
         </ul>
@@ -77,13 +128,12 @@ const PROJECTS = [
             <LinkButton href={github}>
               <GithubIcon class="size-6" />
               Repositorio
-              
             </LinkButton>
           )}
           {link && (
             <LinkButton href={link}>
               <LinkIcon class="size-4" />
-              Despliegue
+              Más información
             </LinkButton>
           )}
         </footer>
